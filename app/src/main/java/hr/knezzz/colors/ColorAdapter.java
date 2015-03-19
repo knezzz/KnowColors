@@ -34,6 +34,9 @@ public class ColorAdapter extends BaseAdapter implements I{
         this.score = score;
         this.width = width;
 
+        ROWS_NO = ROWS_EASY;
+        COLUMNS_NO = COLUMNS_EASY;
+
         if(CHANGE_SIZE) {
             if (score >= CHANGE_TO_HARD) {
                 ROWS_NO = ROWS_HARD;
@@ -41,9 +44,6 @@ public class ColorAdapter extends BaseAdapter implements I{
             } else if (score >= CHANGE_TO_MEDIUM) {
                 ROWS_NO = ROWS_MEDIUM;
                 COLUMNS_NO = COLUMNS_MEDIUM;
-            }else{
-                ROWS_NO = ROWS_EASY;
-                COLUMNS_NO = COLUMNS_EASY;
             }
         }
 

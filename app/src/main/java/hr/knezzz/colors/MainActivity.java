@@ -95,12 +95,14 @@ public class MainActivity extends Activity implements I{
 
                     startActivity(sentIntent);
 
-                    gridview.setAdapter(ca = new ColorAdapter(MainActivity.this, width, 0));
-
-                    if(CHANGE_SIZE)
+                    if(CHANGE_SIZE) {
                         gridview.setNumColumns(COLUMNS_EASY);
+                    }
 
                     currentScore = 0;
+
+                    gridview.setAdapter(ca = new ColorAdapter(MainActivity.this, width, currentScore));
+
                     score.setText(currentScore+"");
                 }
             }
